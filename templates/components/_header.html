@@ -1,0 +1,36 @@
+{% load static %}
+
+<header id="header">
+    <nav id="navbar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <img src="{% static "./img/netflix_logo.png" %}" alt="">
+            </div>
+
+            <div class="menu d-flex gap-3 rounded-2">
+                <select name="" id="" class="pe-4 ps-1 bg-transparent text-white">
+                    <option value="">Türkçe</option>
+                    <option value="">English</option>
+                </select>
+
+                <a href="" class="btn btn-danger fw-bold">Oturum Aç</a>
+
+            </div>
+        </div>
+
+    </nav>
+    <div class="basla">
+        <div class="container text-white d-flex flex-column justify-content-center align-items-center text-center">
+            <h2 class="fs-1 fw-bold ">Sınırsız film, dizi ve çok daha fazlası</h2>
+            <p class="fs-4 fw-bold">İstediğiniz yerde izleyin. İstediğiniz zaman iptal edin.</p>
+            <p class="fs-5">İzlemeye hazır mısınız? Üye olmak ya da hesabınıza tekrar ulaşmak için tek yapmanız
+                gereken e-posta
+                adresinizi girmek.</p>
+            <form action="" class="d-flex gap-2">
+                <input type="email" name="" id="" placeholder="E-posta adresi" class="bg-black bg-opacity-50
+                py-2 pe-5 ps-2 fs-5 border-1">
+                <input type="button" value="Başlayın >" class="btn btn-danger fs-5">
+            </form>
+        </div>
+    </div>
+</header>
