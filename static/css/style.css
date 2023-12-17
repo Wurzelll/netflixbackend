@@ -1,7 +1,7 @@
 #header {
     height: 600px;
     /* background-image: url(./img/arkaplan.jpg); */
-    background: linear-gradient(to top, rgb(0, 0, 0, .8), rgb(0, 0, 0, 0) 60%, rgb(0, 0, 0, .8) 100%), url(./img/arkaplan.jpg);
+    background: linear-gradient(to top, rgb(0, 0, 0, .8), rgb(0, 0, 0, 0) 60%, rgb(0, 0, 0, .8) 100%), url(../img/arkaplan.jpg);
 }
 
 .basla {
