@@ -13,7 +13,7 @@ def login_view(request):
 
         if form.is_valid():
             username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
+            password = form.cleaned_data.get('password1')
 
             user = authenticate(request, username = username, password = password)
 
@@ -39,4 +39,29 @@ def login_view(request):
 
 def register_view(request):
     
-    return render(request, 'register.html', {})
+    if request.user.is_authenticated:
+        return redirect('index_page')
+    
+    if request.method == 'POST':
+        form = UserRegisterForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            # return redirect('login_page')
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+
+            user = authenticate(request, username = username, password = password)
+            login(request, user)
+            return redirect('index_page')
+        else:
+            return render(request, 'register.html', {
+                    'form': form
+            })
+        
+        
+    form = UserRegisterForm()
+    return render(request, 'register.html', {
+        'form': form
+    })
+        
