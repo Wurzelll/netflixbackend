@@ -117,7 +117,7 @@ def profile_edit_view(request, profile_slug):
 
 def profile_delete_view(request, profile_slug):
 
-    profile = Profile.object.get(slug = profile_slug)
+    profile = Profile.objects.get(slug = profile_slug)
 
     if request.method == 'POST':
         profile.delete()
