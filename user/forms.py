@@ -39,5 +39,8 @@ class UserProfileForm(forms.ModelForm):
         model = Profile
         fields = ('name', 'image')
 
-    def __init__(self,**args, **kwargs):
+    def __init__(self,*args, **kwargs):
         super().__init__(*args, **kwargs)
+
+        self.fields['name'].widget = widgets.TextInput(attrs={'class': 'form-control', 'placeholder': 'Profil ismi'})
+        self.fields['image'].widget = widgets.FileInput(attrs={'class': 'form-control'})
